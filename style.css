@@ -7,36 +7,40 @@
 body {
     background-color: var(--bg-dark);
     color: var(--white);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 5%;
+    padding: 20px 5%;
     border-bottom: 1px solid #222;
 }
 
-.brand { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; }
+.brand { font-size: 1.5rem; font-weight: bold; letter-spacing: 2px; color: var(--gold); }
+
+nav a { color: var(--white); text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
 
 .cta-button {
-    background: transparent;
     border: 1px solid var(--gold);
-    color: var(--gold);
     padding: 10px 20px;
-    text-decoration: none;
     transition: 0.3s;
 }
 
 .cta-button:hover { background: var(--gold); color: var(--bg-dark); }
 
-.hero { padding: 100px 5%; text-align: center; }
+.hero { position: relative; text-align: center; }
 
-.hero h1 { font-size: 3rem; line-height: 1.2; }
+.hero img { width: 100%; max-height: 400px; object-fit: cover; filter: brightness(0.6); }
 
-.hero h1 span { color: var(--gold); display: block; }
+.hero-content { position: absolute; top: 30%; width: 100%; }
+
+.hero h1 { font-size: 2.5rem; }
+
+.hero h1 span { color: var(--gold); display: block; font-size: 1.5rem; }
 
 .service-grid {
     display: grid;
@@ -45,16 +49,8 @@ header {
     padding: 50px 5%;
 }
 
-.service-card {
-    background: #151515;
-    padding: 40px;
-    text-align: center;
-    border-top: 2px solid var(--gold);
-}
+.service-card { background: #151515; padding: 20px; text-align: center; border-top: 2px solid var(--gold); }
 
-footer { 
-    text-align: center; 
-    padding: 40px; 
-    border-top: 1px solid #222; 
-    color: #888; 
-}
+.service-card img { width: 100%; border-radius: 5px; filter: brightness(0.8) contrast(1.2); margin-bottom: 15px; }
+
+footer { text-align: center; padding: 30px; border-top: 1px solid #222; color: #888; font-size: 0.8rem; }
